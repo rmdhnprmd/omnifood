@@ -13,7 +13,9 @@
 --- 01 TYPOGRAPHY SYSTEM
 
   - FONT SIZES (px)
-  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+  10 / 12 / 14 / 16 / 18 / 20 /
+  24 / 30 / 36 / 44 / 52 / 62 /
+  74 / 86 / 98
 
   - FONT WEIGHTS:
     Default: 400
@@ -23,8 +25,12 @@
   - LINE HEIGHTS:
     Default: 1
     Small: 1.05
+    Medium: 1.2
     Paragraph default: 1.6
 
+  - LETTER SPACING:
+    1px
+    0.75px
 
 --- 02 COLORS
 
@@ -44,7 +50,8 @@
 --- 07 WHITESPACE
 
   - SPACING SYSTEM (px)
-  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 
+  2 / 4 / 8 / 12 / 16 / 24 / 32 /
+  48 / 64 / 80 / 96 / 128 
 */
 
 * {
@@ -75,14 +82,35 @@ body {
 /* GENERAL REUSABLE COMPONENTS */
 /*****************************/
 
+.heading-primary,
+.heading-secondary {
+  font-weight: 900;
+  color: #333;
+  /* color: #343a40; */
+  letter-spacing: 1px;
+}
+
 .heading-primary {
   font-size: 5.2rem;
-  font-weight: 900;
   line-height: 1.05;
-  color: #333;
-  letter-spacing: 1px;
   /* letter-spacing: -0.5px; */
   margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
 }
 
 .btn:link,
@@ -102,11 +130,10 @@ body {
 .btn--full:visited {
   background-color: #e67e22;
   color: #fff;
-
 }
 
 .btn--full:hover,
-.btn--full:active{
+.btn--full:active {
   background-color: #cf711f;
 }
 
@@ -167,7 +194,7 @@ body {
   /* Because we want header to be sticky later */
   height: 9.6rem;
   padding: 0 4.8rem;
-} 
+}
 
 .logo {
   height: 2.2rem;
@@ -184,7 +211,7 @@ body {
   gap: 3.2rem;
 }
 
-.main-nav-link:link, 
+.main-nav-link:link,
 .main-nav-link:visited {
   display: inline-block;
   text-decoration: none;
@@ -194,7 +221,7 @@ body {
   transition: all 0.3s;
 }
 
-.main-nav-link:hover, 
+.main-nav-link:hover,
 .main-nav-link:active {
   color: #cf711f;
 }
@@ -225,7 +252,6 @@ body {
   max-width: 130rem;
   margin: 0 auto;
   padding: 0 3.2rem;
-
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -269,7 +295,7 @@ body {
   font-size: 2.2rem;
   line-height: 1.6;
   margin-bottom: 4.8rem;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.75px;
 }
 
 .hero-img {
@@ -302,7 +328,7 @@ body {
 .delivered-text {
   font-size: 1.8rem;
   font-weight: 700;
-  letter-spacing: 0.7px;
+  letter-spacing: 0.75px;
 }
 
 .delivered-text span {
@@ -316,6 +342,8 @@ body {
 
 .section-how {
   padding: 9.6rem 0;
-  background-color: orangered;
 }
 
+.step-img {
+  width: 50%;
+}

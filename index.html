@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/general.css" />
     <script src="/script/animated-heading.js" async></script>
     <title>Omnifood Development</title>
   </head>
@@ -13,7 +13,14 @@
       <img src="img/omnifood-logo.png" alt="Omnifood Logo" class="logo" />
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#">Section 1</a></li>
+          <li>
+            <a
+              class="main-nav-link"
+              href="#"
+              data-target="#section-how"
+              >Section 1</a
+            >
+          </li>
           <li><a class="main-nav-link" href="#">Section 2</a></li>
           <li><a class="main-nav-link" href="#">Section 3</a></li>
           <li><a class="main-nav-link" href="#">Section 4</a></li>
@@ -65,22 +72,28 @@
 
       <section class="section-featured">
         <h2 class="heading-featured-in">As featured in</h2>
-          <div class="logos">
-            <div class="logos-slide">
-              <img src="img/logos/business-insider.png" alt="Business Insider Logo">
-              <img src="img/logos/buzzfeed.png" alt="Buzzfeed Logo">
-              <img src="img/logos/cnn.png" alt="CNN Logo">
-              <img src="img/logos/forbes.png" alt="Forbes Logo">
-              <img src="img/logos/macys.png" alt="Macys Logo">
-              <img src="img/logos/mens-health.png" alt="Mens Health Logo">
-              <img src="img/logos/techcrunch.png" alt="Techcrunch Logo">
-              <img src="img/logos/the-new-york-times.png" alt="The New York Times Logo">
-              <img src="img/logos/usa-today.png" alt="Usa Today Logo">
-            </div>
+        <div class="logos">
+          <div class="logos-slide">
+            <img
+              src="img/logos/business-insider.png"
+              alt="Business Insider Logo"
+            />
+            <img src="img/logos/buzzfeed.png" alt="Buzzfeed Logo" />
+            <img src="img/logos/cnn.png" alt="CNN Logo" />
+            <img src="img/logos/forbes.png" alt="Forbes Logo" />
+            <img src="img/logos/macys.png" alt="Macys Logo" />
+            <img src="img/logos/mens-health.png" alt="Mens Health Logo" />
+            <img src="img/logos/techcrunch.png" alt="Techcrunch Logo" />
+            <img
+              src="img/logos/the-new-york-times.png"
+              alt="The New York Times Logo"
+            />
+            <img src="img/logos/usa-today.png" alt="Usa Today Logo" />
           </div>
+        </div>
       </section>
 
-      <section class="section-how">
+      <section class="section-how" id="section-how">
         <div class="container">
           <span class="subheading">How it works</span>
           <h2 class="heading-secondary">
@@ -131,14 +144,11 @@
           <!-- Step 03 -->
           <div class="step-text-box">
             <p class="step-number">03</p>
-            <h3 class="heading-tertiary">
-              Receive meals at convenient time
-            </h3>
+            <h3 class="heading-tertiary">Receive meals at convenient time</h3>
             <p class="step-description">
-              Best chefs in town will cook
-              your selected meal every day, and we will deliver it to your door
-              whenever works best for you. You can change delivery schedule and
-              address daily!
+              Best chefs in town will cook your selected meal every day, and we
+              will deliver it to your door whenever works best for you. You can
+              change delivery schedule and address daily!
             </p>
           </div>
           <div class="step-image-box">
@@ -153,5 +163,37 @@
     </main>
 
     <script src="script/featured-in-slide.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <script>
+      const lenis = new Lenis();
+
+      lenis.on("scroll", (e) => {
+        console.log(e);
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      const scrollButtons = document.querySelectorAll("[data-target]");
+      scrollButtons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+          e.preventDefault();
+          let target = button.dataset.target,
+            $el = document.getElementById(target.replace("#", ""));
+
+          lenis.scrollTo($el, {
+            offset: 0,
+            immediate: false,
+            duration: 2,
+            easing: (x) =>
+              x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2,
+          });
+        });
+      });
+
+      requestAnimationFrame(raf);
+    </script>
   </body>
 </html>

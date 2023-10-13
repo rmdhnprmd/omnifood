@@ -185,6 +185,26 @@
   animation-play-state: paused;
 }
 
+.logos::before,
+.logos::after {
+  content: "";
+  top: 0;
+  position: absolute;
+  width: 250px;
+  height: 100%;
+  z-index: 2;
+}
+
+.logos::before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
 @keyframes slide {
   from {
     transform: translateX(0);
@@ -196,7 +216,7 @@
 
 .logos-slide {
   display: inline-block;
-  animation: 14s slide infinite linear;
+  animation: 28s slide infinite linear;
 }
 
 .logos-slide img {

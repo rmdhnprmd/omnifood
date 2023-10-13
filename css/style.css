@@ -154,6 +154,61 @@
 }
 
 /*****************************/
+/* FEATURED IN SECTION */
+/*****************************/
+
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.heading-featured-in {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3.2rem;
+  color: #888;
+}
+
+.logos {
+  /* setelan omnifood */
+  /* display: flex; */
+  /* justify-content: space-around; */
+
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 14s slide infinite linear;
+}
+
+.logos-slide img {
+  filter: brightness(0);
+  opacity: 50%;
+  height: 3.2rem;
+
+  margin: 0 4.8rem;
+
+}
+
+/*****************************/
 /* HOW IT WORKS SECTION */
 /*****************************/
 

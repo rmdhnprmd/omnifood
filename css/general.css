@@ -9,8 +9,9 @@
 
   - FONT WEIGHTS:
     Default: 400
-    Medium 700
-    Bold 900
+    Medium: 700
+    Semi Bold: 800 
+    Bold:900
 
   - LINE HEIGHTS:
     Default: 1
@@ -39,6 +40,7 @@
 
 --- 06 BORDER-RADIUS
   Default: 9px
+  Medium: 11px
 
 --- 07 WHITESPACE
 
@@ -186,3 +188,6 @@ body {
   margin-right: 1.6rem !important;
 }
 
+strong {
+  font-weight: 600;
+}

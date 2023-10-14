@@ -72,6 +72,7 @@ body {
   font-weight: 400;
   color: #555;
   line-height: 1;
+  cursor: none;
 }
 
 /*****************************/
@@ -154,6 +155,7 @@ body {
   font-weight: 700;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
+  cursor: none;
 
   transition: 0.3s;
 }

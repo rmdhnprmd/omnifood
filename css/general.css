@@ -1,8 +1,8 @@
 @font-face {
   font-family: "CabinetGrotesk-Variable";
-  src: url("font/CabinetGrotesk-Variable.woff2") format("woff2"),
-    url("font/CabinetGrotesk-Variable.woff") format("woff"),
-    url("font/CabinetGrotesk-Variable.ttf") format("truetype");
+  src: url("/font/CabinetGrotesk-Variable.woff2") format("woff2"),
+    url("/font/CabinetGrotesk-Variable.woff") format("woff"),
+    url("/font/CabinetGrotesk-Variable.ttf") format("truetype");
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;

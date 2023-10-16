@@ -9,20 +9,20 @@
   left: 0;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  z-index: 1;
+  z-index: 9999;
   pointer-events: none;
 }
 
 .cursor-dot {
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: #888;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #cf711f;
 }
 
 .cursor-outline {
   width: 4rem;
   height: 4rem;
-  border: 0.2rem solid #e67e22;
+  border: 0.2rem solid #cf711f;
 }
 
 /*****************************/
@@ -392,4 +392,24 @@
 
 .meal-img {
   width: 100%;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
 }

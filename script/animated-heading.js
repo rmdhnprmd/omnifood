@@ -1,5 +1,5 @@
 const dynamicText = document.querySelector(".animated-heading span");
-const words = ["day.", "time.", "where.", "thing."];
+const words = ["day", "time", "thing"];
 
 let wordIndex = 0;
 let charIndex = 0;

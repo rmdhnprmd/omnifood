@@ -196,7 +196,7 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 3.2rem;
-  color: #888;
+  color: #555;
 }
 
 .logos {
@@ -430,6 +430,9 @@
 
 .section-testimonials {
   background-color: #fdf2e9;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
 }
 
 .testimonials-container {
@@ -439,7 +442,8 @@
 .testimonials {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4.8rem;
+  row-gap: 4.8rem;
+  column-gap: 8rem;
 }
 
 .testimonial-img {
@@ -456,7 +460,7 @@
 
 .testimonial-name {
   font-size: 1.6rem;
-  color: #777;
+  color: #6f6f6f;
 }
 
 .gallery {
@@ -466,7 +470,16 @@
   padding: 1.6rem;
 }
 
+.gallery-item {
+  overflow: hidden;
+}
+
 .gallery-item img {
   display: block;
   width: 100%;
+  transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
 }

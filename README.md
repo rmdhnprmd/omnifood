@@ -1,2 +1,4 @@
 # omnifood
-Website tentang makanan diet 
+## Website about food diet
+
+Built in Javascript Vanilla

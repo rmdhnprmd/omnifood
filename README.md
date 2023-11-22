@@ -1,4 +1,4 @@
-# omnifood
-## Website about food diet
+## omnifood
 
+Web of company profile about diet food
 Built in Javascript Vanilla

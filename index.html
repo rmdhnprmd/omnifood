@@ -37,7 +37,7 @@
               >Testimonials</a
             >
           </li>
-          <li><a class="main-nav-link" href="#">Pricing</a></li>
+          <li><a class="main-nav-link" href="#" data-target="#section-pricing">Pricing</a></li>
           <li><a class="main-nav-link nav-cta" href="#">Try for free</a></li>
         </ul>
       </nav>
@@ -443,7 +443,7 @@
         </div>
       </section>
 
-      <section class="section-pricing">
+      <section id="section-pricing" class="section-pricing">
         <div class="container">
           <span class="subheading">Pricing</span>
           <h2 class="heading-secondary">
@@ -517,7 +517,8 @@
 
         <div class="container grid">
           <aside class="plan-details">
-            Prices include all applicable taxes. Users can cancel at any time. Both plans include the following: 
+            Prices include all applicable taxes. Users can cancel at any time.
+            Both plans include the following:
           </aside>
         </div>
 
@@ -526,7 +527,8 @@
             <ion-icon class="feature-icon" name="infinite-outline"></ion-icon>
             <p class="feature-title">Never cook again!</p>
             <p class="feature-text">
-              Our subscriptions cover 365 days per year, even including major holidays.
+              Our subscriptions cover 365 days per year, even including major
+              holidays.
             </p>
           </div>
 
@@ -534,7 +536,8 @@
             <ion-icon class="feature-icon" name="nutrition-outline"></ion-icon>
             <p class="feature-title">Local and organic</p>
             <p class="feature-text">
-              Our cooks only use local, fresh, and organic products to prepare your meals.
+              Our cooks only use local, fresh, and organic products to prepare
+              your meals.
             </p>
           </div>
 
@@ -542,7 +545,8 @@
             <ion-icon class="feature-icon" name="leaf-outline"></ion-icon>
             <p class="feature-title">No waste</p>
             <p class="feature-text">
-              All our partners only use reusable containers to package all your meals.
+              All our partners only use reusable containers to package all your
+              meals.
             </p>
           </div>
 
@@ -550,10 +554,69 @@
             <ion-icon class="feature-icon" name="pause-outline"></ion-icon>
             <p class="feature-title">Pause anytime</p>
             <p class="feature-text">
-              Going on vacation? Just pause your subscription, and we refund unused days.
+              Going on vacation? Just pause your subscription, and we refund
+              unused days.
             </p>
           </div>
-         
+        </div>
+      </section>
+
+      <section class="section-cta">
+        <div class="container">
+          <div class="cta">
+            <div class="cta-text-box">
+              <h2 class="heading-secondary">Get your first meal for free!</h2>
+              <p class="cta-text">
+                Healthy, tasty and hassle-free meals are waiting for you. Start
+                eating well today. You can cancel or pause anytime. And the
+                first meal is on us!
+              </p>
+
+              <form class="cta-form" action="#">
+                <div>
+                  <label for="full-name">Full Name</label>
+                  <input
+                    required
+                    id="full-name"
+                    type="text"
+                    placeholder="John Smith"
+                  />
+                </div>
+
+                <div>
+                  <label for="email">Email Address</label>
+                  <input
+                    required
+                    id="email"
+                    type="email"
+                    placeholder="me@example.com"
+                  />
+                </div>
+
+                <div>
+                  <label for="select-where">Where did you hear from us?</label>
+                  <select required name="" id="select-where">
+                    <option value="">Please choose one option:</option>
+                    <option value="friends">Friends & Family</option>
+                    <option value="youtube">Youtube</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="others">Others</option>
+                  </select>
+                </div>
+
+                <button class="btn btn--form">Sign up now</button>
+
+                <!-- <input type="checkbox" name="" id="">
+                <input type="number" name="" id=""> -->
+              </form>
+            </div>
+            <div
+              class="cta-img-box"
+              role="img"
+              aria-label="Woman enjoying food"
+            ></div>
+          </div>
         </div>
       </section>
     </main>
@@ -572,7 +635,7 @@
       const lenis = new Lenis();
 
       lenis.on("scroll", (e) => {
-        console.log(e);
+        // console.log(e);
       });
 
       function raf(time) {

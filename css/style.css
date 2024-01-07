@@ -52,7 +52,7 @@
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 3.2rem;
+  gap: 4.8rem;
 }
 
 .main-nav-link:link,
@@ -195,7 +195,7 @@
   letter-spacing: 0.75px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 3.2rem;
+  margin-bottom: 6.4rem;
   color: #555;
 }
 
@@ -592,7 +592,6 @@
   border-radius: 11px;
   background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
   overflow: hidden;
-
 }
 
 .cta-text-box {
@@ -651,7 +650,7 @@
 }
 
 .cta-form input::placeholder {
-  color: #aaa
+  color: #aaa;
 }
 
 .cta *:focus {
@@ -665,7 +664,7 @@
 
 .footer {
   padding: 12.8rem 0;
-  border-top: 1px solid #eee
+  border-top: 1px solid #eee;
 }
 
 .grid--footer {
@@ -733,5 +732,5 @@
 
 .footer-link:hover,
 .footer-link:active {
-  color: #555
+  color: #555;
 }

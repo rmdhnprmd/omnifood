@@ -597,13 +597,15 @@
                 first meal is on us!
               </p>
 
-              <form class="cta-form" action="#">
+              <form  action="https://formspree.io/f/xzbndbbv"
+              method="POST" class="cta-form" action="#">
                 <div>
                   <label for="full-name">Full Name</label>
                   <input
                     required
                     id="full-name"
                     type="text"
+                    name="full-name"
                     placeholder="John Smith"
                   />
                 </div>
@@ -614,13 +616,14 @@
                     required
                     id="email"
                     type="email"
+                    name="email"
                     placeholder="me@example.com"
                   />
                 </div>
 
                 <div>
                   <label for="select-where">Where did you hear from us?</label>
-                  <select required name="" id="select-where">
+                  <select required name="select-where" id="select-where">
                     <option value="">Please choose one option:</option>
                     <option value="friends">Friends & Family</option>
                     <option value="youtube">Youtube</option>
@@ -630,7 +633,7 @@
                   </select>
                 </div>
 
-                <button class="btn btn--form">Sign up now</button>
+                <button class="btn btn--form" type="submit">Sign up now</button>
 
                 <!-- <input type="checkbox" name="" id="">
                 <input type="number" name="" id=""> -->
